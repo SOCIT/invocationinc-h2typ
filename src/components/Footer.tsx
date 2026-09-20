@@ -1,0 +1,18 @@
+import Link from "next/link";
+
+export function Footer() {
+  const year = new Date().getFullYear();
+  return (
+    <footer className="lf-footer">
+      <p>
+        © {year} Invocation Inc. SmileBell™ / CalmBell™. Not therapy. Not medical
+        advice.
+      </p>
+      <p>
+        <Link href="/privacy">Privacy</Link>
+        {" · "}
+        <Link href="/terms">Terms</Link>
+      </p>
+    </footer>
+  );
+}
