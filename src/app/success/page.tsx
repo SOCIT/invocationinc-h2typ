@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { APP_URL, brand } from "@/lib/products";
+import { brand } from "@/lib/products";
+import { EpubNotify } from "@/components/EpubNotify";
 
 export const metadata: Metadata = {
   title: "Purchase complete",
@@ -20,21 +21,26 @@ export default async function SuccessPage({
     <>
       <Header />
       <main className="inner-page lf-wrap" style={{ paddingBottom: 48 }}>
-        <h1>Purchase complete</h1>
+        <p className="lf-stamp">Payment confirmed. Welcome, operator.</p>
+        <h1>Your copy of {brand.bookTitle}</h1>
         <p>
-          Instant access: PDFs and the companion app beta exist. Check your email
-          for the Stripe receipt. File-delivery email may still be separate —
-          there is no download button on this page.
+          The PDF is ready right now — download it below and keep it forever.
+          Check your email for the Stripe receipt.
         </p>
-        <p>
-          Companion app:{" "}
-          <a href={APP_URL} rel="noreferrer" target="_blank">
-            {APP_URL}
+        <div className="lf-cta">
+          <a
+            className="lf-btn lf-btn-red"
+            href="/downloads/h2typ.pdf"
+            download="How-to-Train-Your-Partner.pdf"
+          >
+            Download the PDF
           </a>
-        </p>
-        <p>
-          If files do not arrive, contact {brand.name} with your order details.
-        </p>
+          <p className="lf-tiny">
+            The EPUB edition is in final formatting. Leave your email and it lands
+            in your inbox free the moment it&apos;s done.
+          </p>
+          <EpubNotify />
+        </div>
         {sessionId && (
           <p className="lf-tiny" style={{ color: "var(--soft)" }}>
             Session: {sessionId}

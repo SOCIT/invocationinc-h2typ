@@ -1,10 +1,9 @@
 /**
- * EW2H offers — book | stack only.
- * Do not add workbook-only or combo SKUs.
- * Do not hardcode Stripe Price IDs; wire them via env.
+ * H2TYP offer — the ebook, direct from the author.
+ * PDF + EPUB. Do not hardcode Stripe Price IDs; wire them via env.
  */
 
-export type ProductId = "book" | "stack";
+export type ProductId = "book";
 
 export interface Product {
   id: ProductId;
@@ -18,7 +17,7 @@ export interface Product {
   listPriceDisplay?: string;
   listPriceCents?: number;
   /** Env var name holding the Stripe Price ID for this offer. */
-  stripePriceEnvKey: "STRIPE_PRICE_BOOK" | "STRIPE_PRICE_STACK";
+  stripePriceEnvKey: "STRIPE_PRICE_BOOK";
   /**
    * Optional Stripe Payment Link. Leave empty to use /api/checkout.
    * Prefer API checkout + env Price IDs.
@@ -43,43 +42,23 @@ export const brand = {
   red: "#d10f28",
 } as const;
 
-/** Companion app (client-only beta). */
-export const APP_URL = "https://invocationinc-ew2h-app.vercel.app";
-
-/** localStorage key for the 24h STACK deadline. Set once; refresh must not reset. */
-export const STACK_DEADLINE_KEY = "ew2h_stack_deadline";
-
-export const STACK_WINDOW_MS = 24 * 60 * 60 * 1000;
+/** First-100 launch code: $9.97 -> $4.97 at checkout (enter at payment step). */
+export const LAUNCH_CODE = "H2TYP100";
 
 export const products: Product[] = [
   {
-    id: "stack",
-    name: "Eight Weeks to Happy — STACK",
-    shortName: "STACK",
-    description: "Book PDF + Workbook PDF + Companion App access.",
-    priceDisplay: "$47",
-    priceCents: 4700,
-    listPriceDisplay: "$97",
-    listPriceCents: 9700,
-    stripePriceEnvKey: "STRIPE_PRICE_STACK",
-    paymentLinkUrl: "",
-    highlighted: true,
-    features: [
-      "Book PDF",
-      "Workbook PDF",
-      "Companion App access",
-    ],
-  },
-  {
     id: "book",
-    name: "Eight Weeks to Happy — Book (PDF)",
-    shortName: "WHY",
-    description: "Book PDF only.",
-    priceDisplay: "$9.99",
-    priceCents: 999,
+    name: "How to Train Your Partner — Ebook",
+    shortName: "The Ebook",
+    description: "The complete book. PDF available instantly; EPUB edition in final formatting, emailed to buyers.",
+    priceDisplay: "$9.97",
+    priceCents: 997,
+    listPriceDisplay: "$19.97",
+    listPriceCents: 1997,
     stripePriceEnvKey: "STRIPE_PRICE_BOOK",
     paymentLinkUrl: "",
-    features: ["Book PDF only"],
+    highlighted: true,
+    features: ["Book PDF — instant download", "EPUB edition — emailed when formatting is done"],
   },
 ];
 
@@ -88,8 +67,7 @@ export function getProduct(id: ProductId): Product | undefined {
 }
 
 export function isValidProductId(id: string): id is ProductId {
-  return id === "book" || id === "stack";
+  return id === "book";
 }
 
-export const stackProduct = getProduct("stack")!;
 export const bookProduct = getProduct("book")!;

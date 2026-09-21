@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { NotifyForm } from "./NotifyForm";
+import { BuyButton } from "./BuyButton";
+import { bookProduct, LAUNCH_CODE } from "@/lib/products";
 
 const CHAPTERS: Array<[string, string]> = [
   ["Chapter 0 — Brief", "The contract. Fix yourself first, communicate so it lands, use incentives without becoming a manipulator. Includes the violence and codependence gates — read these before anything else."],
@@ -57,18 +58,26 @@ const FAQS: Array<[string, string]> = [
     "We're already in counseling. Is this a replacement?",
     "No. This isn't therapy — it's a daily operating system for the hours between sessions. If you need therapy, get therapy. This book assumes you're safe enough to stay and whole enough to change yourself first.",
   ],
+  [
+    "What exactly do I get?",
+    "The complete book as a PDF, available to download the second your payment clears. The EPUB edition is in final formatting — every buyer gets it emailed free the moment it's done.",
+  ],
+  [
+    "Will this be on Amazon?",
+    "Kindle and paperback editions are coming to Amazon at their own prices. Buying here direct gets you the launch price — and the first 100 readers pay $4.97 with the code at the top of this page.",
+  ],
 ];
 
 export function H2TYPPage() {
   return (
     <>
       <div className="lf-bar">
-        HOW TO TRAIN YOUR PARTNER — <span className="lf-now">LAUNCH LIST NOW OPEN</span>
+        HOW TO TRAIN YOUR PARTNER — <span className="lf-now">$9.97 · FIRST 100 READERS PAY $4.97</span>
       </div>
 
       <header className="lf-site-header">
         <div>Invocation Inc · Human Performance Engineers</div>
-        <Link href="#notify">Get notified at launch</Link>
+        <Link href="#offer">Get the Ebook — {bookProduct.priceDisplay}</Link>
       </header>
 
       <main id="main" className="lf-wrap">
@@ -91,6 +100,13 @@ export function H2TYPPage() {
         </p>
 
         <p>
+          <strong>Time travel is impossible. No, it isn&apos;t — it&apos;s easy.</strong>{" "}
+          Chapter 7 is literally called <em>Time Travel</em>: how you change this hour
+          without waiting for a new personality. Recode the past. Frontload the future.
+          Tonight.
+        </p>
+
+        <p>
           Yes, the title is deliberate. No, it is not about controlling anyone.{" "}
           <strong>You train the positive behavior</strong> — yours first, then the
           pair's — with communication that actually lands, incentives aimed at a
@@ -109,7 +125,17 @@ export function H2TYPPage() {
           wrong book.
         </p>
 
-        <NotifyForm kicker="The book is in final preparation — join the launch list" />
+        <div className="lf-cta" id="buy-hero">
+          <BuyButton
+            productId="book"
+            label={<>Get the Ebook — {bookProduct.priceDisplay}</>}
+          />
+          <p className="lf-tiny">
+            First 100 readers: enter code <strong>{LAUNCH_CODE}</strong> at checkout
+            and pay $4.97. PDF instant download · EPUB emailed free when formatting
+            is done.
+          </p>
+        </div>
 
         <h2>The gate: read this before anything else</h2>
 
@@ -149,13 +175,13 @@ export function H2TYPPage() {
         <h2>The rot: what this book fixes</h2>
 
         <p>
-          Every long relationship accumulates a file of old sentences. They come back
+          Every relationship accumulates a file of old sentences. They come back
           in fights, word for word: <em>“You are just like your mother.” “I should have
           left.” “You’re lucky I stay.”</em> The words you choose plant the seed of
           either success or failure in the mind of another — permanently.
         </p>
 
-        <p>Most fights are two different nights in one kitchen.</p>
+        <p>Most fights are just two different versions of the same story — different views, different perspectives.</p>
 
         <p>
           Mismatch is most of the stupid fights in a house. <em>“You never help”</em>{" "}
@@ -180,10 +206,24 @@ export function H2TYPPage() {
         <h2>The mechanism: Relationship Math</h2>
 
         <p>
+          And this isn&apos;t vibes — it&apos;s hard science. Helen Fisher sticking
+          couples into fMRI scanners and dissecting the anatomy of love. Conditioning
+          mechanics. Neurochemistry you can run on purpose instead of by accident.
+        </p>
+
+        <p>
           Here is the core mechanic, and it is not fair:{" "}
           <strong>negatives hit at −2 or more. Positives land at +1 or less.</strong>{" "}
           One contemptuous sentence erases a week of kindness. Once you know the math,
           you stop spending your words like they are all worth the same.
+        </p>
+
+        <p>
+          People run from the negative with twice the vigor they run toward the
+          positive. <strong>Run from the sabertooth, walk toward the berries.</strong>{" "}
+          The brain is built to remember the saber-tooth — anger and disappointment
+          stick because they read as threat. So you don&apos;t change the present with
+          fear. You train the positive behavior and reward it until it&apos;s ordinary.
         </p>
 
         <p>
@@ -195,11 +235,12 @@ export function H2TYPPage() {
         </p>
 
         <p>
-          And the part nobody says out loud: <strong>you are the bell.</strong> Classical
-          conditioning means your partner feels something the moment the car pulls in —
-          before a word is spoken. Operant conditioning means what follows a behavior
-          teaches the future. You are already training each other every day. This book
-          makes it deliberate, and aimed at the pair instead of at winning.
+          And the part nobody says out loud: <strong>you are the bell</strong> — the
+          trigger that sets your partner&apos;s mood the moment the car pulls in, before
+          a word is spoken. <strong>You are the cause of way more than you know.</strong>{" "}
+          Operant conditioning means what follows a behavior teaches the future. You are
+          already training each other every day. This book makes it deliberate, and aimed
+          at the pair instead of at winning.
         </p>
 
         <p>The operator sequence, in order:</p>
@@ -248,29 +289,53 @@ export function H2TYPPage() {
         <p>
           <strong>Jonah Dorman</strong> is a U.S. Army combat veteran. He trained foster
           parents, social workers, and child-protection staff in trauma-informed care
-          and positive communication — Regional VP of the Florida Foster Parent
-          Association, VP of the Pinellas and Pasco associations. He has led teams from
-          small technical groups to organizations of dozens and hundreds of people, and
+          and positive communication — and served as VP or Chair/CoChair of 7+
+          organizations bridging foster parents, the agencies that handle placements,
+          and the government.
+        </p>
+
+        <p>
+          He&apos;s been GM, VP, interim CEO — managing coders and IT workers (not always
+          the best communicators) and running performance reviews for a living. He has
           studied hypnosis, NLP, sales, and performance.
         </p>
 
         <p>
           The book is what those jobs have in common: humans respond to incentives,
-          stories, and repetition — whether you admit it or not.
+          stories, and repetition — whether you admit it or not. Years of knowledge,
+          hundreds of books and published papers, years of coaching people on
+          relationships — dumbed down into methods normal people can use. No NLP. No
+          regressive hypnosis. No EMDR. None of the professional and dark arts of
+          psychology required.
         </p>
 
-        <h2 id="offer">Get it at launch</h2>
+        <h2 id="offer">Get the book</h2>
 
         <p>
-          <strong>How to Train Your Partner</strong> is in final preparation. Join the
-          launch list and you will be first to know when it drops — and launch-list
-          readers get first access.
+          <strong>How to Train Your Partner</strong> — the complete book, direct from
+          the author. Years of knowledge dumbed down into methods normal people can
+          use. It&apos;s not even a hundred pages. What&apos;s that worth? The coaching
+          behind it is expensive. The manual is <s>{bookProduct.listPriceDisplay}</s>{" "}
+          <strong>{bookProduct.priceDisplay}</strong>.
         </p>
 
-        <NotifyForm
-          id="notify-bottom"
-          kicker="Launch list — one email when it drops"
-        />
+        <div className="lf-cta">
+          <p className="lf-cta-kicker">
+            First 100 readers pay $4.97 — enter code <strong>{LAUNCH_CODE}</strong> at checkout
+          </p>
+          <BuyButton
+            productId="book"
+            label={<>Get the Ebook — {bookProduct.priceDisplay}</>}
+          />
+          <p className="lf-tiny">
+            PDF available to download the second your payment clears. The EPUB edition
+            is in final formatting — every buyer gets it emailed free the moment it&apos;s done.
+          </p>
+          <p className="lf-tiny">
+            Sold here direct from the author. Kindle and paperback editions are coming
+            to Amazon at their own prices — buying here gets you the launch price.
+          </p>
+        </div>
 
         <h2>Questions</h2>
 

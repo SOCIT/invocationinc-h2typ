@@ -15,7 +15,7 @@ export default function CancelPage() {
         <h1>Checkout canceled</h1>
         <p>No charge was made. Return to the offer when you want to try again.</p>
         <p>
-          <Link href="/#offer">Back to STACK</Link>
+          <Link href="/#offer">Back to the offer</Link>
           {" · "}
           <Link href="/">Home</Link>
         </p>

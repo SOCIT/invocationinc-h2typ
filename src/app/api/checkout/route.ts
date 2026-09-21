@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-/** Checkout product ids: book | stack only. No workbook-only SKU. */
+/** Checkout product ids: book only. */
 import {
   getSiteUrl,
   getStripe,
@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     if (!productId || typeof productId !== "string" || !isValidProductId(productId)) {
       return NextResponse.json(
-        { error: "Invalid product. Use book or stack." },
+        { error: "Invalid product." },
         { status: 400 }
       );
     }
@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
         {
           error: "checkout_not_configured",
           message:
-            "Stripe is not configured yet. Add STRIPE_SECRET_KEY and STRIPE_PRICE_BOOK / STRIPE_PRICE_STACK to env — see README.",
+            "Stripe is not configured yet. Add STRIPE_SECRET_KEY and STRIPE_PRICE_BOOK to env — see README.",
         },
         { status: 503 }
       );

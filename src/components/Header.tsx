@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { StackPrice } from "./StackPrice";
+import { bookProduct } from "@/lib/products";
 
 export function Header() {
   return (
     <header className="lf-site-header">
       <div>Invocation Inc · Human Performance Engineers</div>
       <Link href="/#offer">
-        Take the Full System — <StackPrice />
+        Get the Ebook — {bookProduct.priceDisplay}
       </Link>
     </header>
   );

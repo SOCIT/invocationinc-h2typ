@@ -2,7 +2,6 @@
 
 import { useState, type ReactNode } from "react";
 import { getProduct, type ProductId } from "@/lib/products";
-import { StackPrice } from "./StackPrice";
 
 interface BuyButtonProps {
   productId: ProductId;
@@ -14,13 +13,6 @@ interface BuyButtonProps {
 
 function defaultLabel(productId: ProductId): ReactNode {
   const product = getProduct(productId);
-  if (productId === "stack") {
-    return (
-      <>
-        Take the Stack — <StackPrice />
-      </>
-    );
-  }
   return product ? `${product.shortName} — ${product.priceDisplay}` : "Buy now";
 }
 
@@ -57,8 +49,7 @@ export function BuyButton({
 
       if (res.status === 503 || data.error === "checkout_not_configured") {
         setMessage(
-          data.message ||
-            "Checkout is not configured. Set STRIPE_SECRET_KEY and STRIPE_PRICE_BOOK / STRIPE_PRICE_STACK."
+          data.message || "Checkout is not configured yet. Please try again shortly."
         );
         setLoading(false);
         return;
