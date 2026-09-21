@@ -1,7 +1,7 @@
 ---
-name: Escalate to parent
-about: Hand off to Jonah / parent agent after CS attempt
-title: "[escalate] Needs Jonah"
+name: Escalate to Owner Desk
+about: Hand off to Invocation Inc — Owner Desk after CS attempt
+title: "[escalate] Needs Owner Desk"
 labels: escalate
 ---
 
@@ -26,5 +26,5 @@ labels: escalate
 ## What CS already told the customer
 (Summary only — no full book text)
 
-## Ask for Jonah
+## Ask for Owner Desk
 Clear decision needed:

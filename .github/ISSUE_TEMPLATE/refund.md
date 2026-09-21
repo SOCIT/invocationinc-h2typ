@@ -27,4 +27,4 @@ Please try the Stripe Customer Portal before opening this issue. If the portal c
 - Result:
 
 ## Escalation
-If unresolved after **24 hours**, escalate to parent (Jonah) using the escalate template.
+If unresolved after **24 hours**, escalate to **Invocation Inc — Owner Desk** using the escalate template.

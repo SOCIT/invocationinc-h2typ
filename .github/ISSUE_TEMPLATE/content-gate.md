@@ -1,8 +1,8 @@
 ---
 name: Wrong-fit / content gate
 about: Harm, control/hypnosis aim, wrong audience, or “change them not me”
-title: "[gate] Wrong-fit or safety"
-labels: gate
+title: "[content] Wrong-fit or safety"
+labels: content
 ---
 
 ## Gate type (pick one)
@@ -13,7 +13,7 @@ labels: gate
 - [ ] Other wrong-fit:
 
 ## If physical harm (US)
-Do **not** treat as a book support ticket. Point to **thehotline.org** · **1-800-799-7233**, then escalate parent.
+Do **not** treat as a book support ticket. Point to **thehotline.org** · **1-800-799-7233**, then escalate to **Invocation Inc — Owner Desk**.
 
 ## Context (no graphic detail needed)
 Brief reason this is a gate:
@@ -23,4 +23,4 @@ Brief reason this is a gate:
 - [ ] Matched live-site gate language (field manual; not control)
 - [ ] Redirected to H2LP if non-intimate relationship
 - [ ] Refused hypnosis/control requests
-- [ ] Escalated parent for harm cases
+- [ ] Escalated Owner Desk for harm cases
