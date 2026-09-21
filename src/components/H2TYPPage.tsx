@@ -100,10 +100,16 @@ export function H2TYPPage() {
         </p>
 
         <p>
-          <strong>Time travel is impossible. No, it isn&apos;t — it&apos;s easy.</strong>{" "}
-          Chapter 7 is literally called <em>Time Travel</em>: how you change this hour
-          without waiting for a new personality. Recode the past. Frontload the future.
-          Tonight.
+          <strong>You can&apos;t change the past. But you can change the memory of
+          it — which is the same thing.</strong>{" "}
+          Memory isn&apos;t a recording; it&apos;s a rebuild. Every time your partner
+          recalls a fight, they reconstruct it, and whatever story followed the
+          event gets mixed into what they think they saw. That&apos;s the
+          misinformation effect — Elizabeth Loftus&apos;s lab work, not folk wisdom.
+          Chapter 7 is called <em>Time Travel</em>: recode the past so a new
+          reward can beat an old wound, and frontload a night that hasn&apos;t
+          happened yet so the brain gets a finished good memory and the evening
+          just has to catch up.
         </p>
 
         <p>
