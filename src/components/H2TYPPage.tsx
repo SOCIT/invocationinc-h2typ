@@ -60,7 +60,7 @@ const FAQS: Array<[string, string]> = [
   ],
   [
     "What exactly do I get?",
-    "The complete book as a PDF, available to download the second your payment clears. The EPUB edition is in final formatting — every buyer gets it emailed free the moment it's done.",
+    "The complete book as a PDF and an EPUB, available to download the second your payment clears.",
   ],
   [
     "Will this be on Amazon?",
@@ -150,8 +150,7 @@ export function H2TYPPage() {
           />
           <p className="lf-tiny">
             First 100 readers: enter code <strong>{LAUNCH_CODE}</strong> at checkout
-            and pay $4.97. PDF instant download · EPUB emailed free when formatting
-            is done.
+            and pay $4.97. PDF + EPUB instant download.
           </p>
         </div>
 
@@ -359,8 +358,7 @@ export function H2TYPPage() {
             label={<>Get the Ebook — {bookProduct.priceDisplay}</>}
           />
           <p className="lf-tiny">
-            PDF available to download the second your payment clears. The EPUB edition
-            is in final formatting — every buyer gets it emailed free the moment it&apos;s done.
+            PDF and EPUB available to download the second your payment clears.
           </p>
           <p className="lf-tiny">
             Sold here direct from the author. Kindle and paperback editions are coming
