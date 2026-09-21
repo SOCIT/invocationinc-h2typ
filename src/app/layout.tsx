@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${brand.bookTitle} — ${brand.name}`,
     description:
-      "How to Train Your Partner — a blunt field manual for intimate relationships. Launch list now open.",
+      "How to Train Your Partner — a blunt field manual for intimate relationships. Ebook $9.97 direct from the author.",
     siteName: brand.name,
     type: "website",
   },
