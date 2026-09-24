@@ -4,23 +4,23 @@ import { bookProduct, LAUNCH_CODE } from "@/lib/products";
 
 const CHAPTERS: Array<[string, string]> = [
   ["Chapter 0 — Brief", "The contract. Fix yourself first, communicate so it lands, use incentives without becoming a manipulator. Includes the violence and codependence gates — read these before anything else."],
-  ["Chapter 1 — Become Someone Worth Building With", "The minimum viable you: ten practices to run before you operate on anyone else. Clean up the narrator or you will keep hiring critics."],
-  ["Chapter 2 — Communication", "Communication is what the listener does. Love languages, representational systems, Satir's leveler, Gottman's Four Horsemen, Maslow as a fight diagnostic, Robbins' six needs. Treat them how they want to be treated."],
+  ["Chapter 1 — Become Someone Worth Building With", "The minimum viable you: ten practices to run before you try to change anyone else. Clean up the narrator or you will keep hiring critics."],
+  ["Chapter 2 — Communication", "Communication is what the listener does. Love languages, plain talk without vinegar, diagnosing the real fight — blood-sugar, sleep, fear, or respect — and the repair move for each failure mode. Treat them how they want to be treated."],
   ["Chapter 3 — Questions", "A staged question bank for exposing deal-breakers — by stage: after 3 dates, official, “I love you,” after sex, met the family. Values, money, kids, exes, conflict style. The mouth gives a theory. The week gives the spec."],
   ["Chapter 4 — Preventing Trauma Bonds", "Hot-cold-fear-reward is a slot machine, not love. ACE screening. If the relationship only works when someone is scared or sorry, it is not a language problem. It is this."],
   ["Chapter 5 — Neurobiology", "The wiring diagram: adrenaline, dopamine, oxytocin, endorphins, serotonin, GABA, glutamate — what each lever does, and four moves that use the chemistry on purpose. A feeling is not a verdict. It is often a chemical you just invited."],
-  ["Chapter 6 — Understanding Incentive", "Relationship Math: negatives hit at −2 or more, positives at +1 or less. Operant vs classical conditioning — what follows the action, and who the person has become when they walk in. You are the bell."],
+  ["Chapter 6 — Understanding Incentive", "Relationship Math: negatives hit at −2 or more, positives at +1 or less. What follows the action, and who the person has become when they walk in. You set the mode of the house."],
   ["Chapter 7 — Changing the Present", "Train the positive behavior, not the negative one. Positive redirection, the running list, ~21 pairings over 1–2 months to install a habit. Creating the present vs changing it."],
-  ["Chapter 8 — Changing the Past", "Memory is rebuilt, not replayed. Recode old fights and old stories in a positive state with a better narrative — or stop arguing and making yourself a worse partner in the past."],
-  ["Chapter 9 — Changing the Future", "Frontload good nights before they happen. Preview in their representational system, name the night, set the good end first. Most of the future is the past plus the present."],
-  ["Chapter 10 — The Tool Set", "The daily practices: the Pause, the recode debrief, Daily GPS bookends, entrainment, frontloading, the “are we fighting?” interrupt, swapping “but” for “and.” The operator's kit."],
-  ["Chapter 11 — The #1 Way", "Maintain a positive attitude toward the relationship as a decision, not a mood. Never let a cheap negative sit. Thought. Word. Act. Habit. Character. Destiny of the pair."],
+  ["Chapter 8 — Changing the Past", "Memory is rebuilt, not replayed. Revisit old fights and old stories in a positive state and change the emotion attached to them — or stop arguing and making yourself a worse partner in the past."],
+  ["Chapter 9 — Changing the Future", "Frontload good nights before they happen. Preview the night in a way they can actually hear, name the night, set the good end first. Most of the future is the past plus the present."],
+  ["Chapter 10 — The Tool Set", "The daily practices: the Pause, the debrief, Daily GPS bookends, entrainment, frontloading, the “are we fighting?” interrupt, swapping “but” for “and.” The toolkit."],
+  ["Chapter 11 — The #1 Way", "Maintain a positive attitude toward the relationship as a decision, not a mood. Never let a cheap negative sit. Thought. Word. Act. Habit. Character. Destiny of the relationship."],
 ];
 
 const FAQS: Array<[string, string]> = [
   [
     "Isn't this manipulative?",
-    "The tools in this book are incentive mechanics every human already uses unconsciously — this book makes them conscious and then constrains them: no violence, no fear-bonds, no staged crises, no aiming them at someone who doesn't want you. Same tools can be used to manipulate. If that is the plan, you are the problem this book is warning the other person about.",
+    "The tools in this book are incentive mechanics every human already uses subconsciously — this book makes them conscious and then constrains them: no violence, no fear-bonds, no staged crises, no aiming them at someone who doesn't want you. Same tools can be used to manipulate. The question is not whether you influence each other. It is whether you do it on purpose, with care, or by accident, with damage. If that is the plan, you are the problem this book is warning the other person about.",
   ],
   [
     "What if my partner won't change?",
@@ -28,15 +28,23 @@ const FAQS: Array<[string, string]> = [
   ],
   [
     "We've tried communicating.",
-    "Communication is what the listener does. You don't get credit for sentences that existed in your head. Most couples didn't fail at effort — they failed at format: care sent in the wrong love language, information sent in the wrong representational system. Chapter 2 rebuilds it from the listener's side.",
+    "Communication is what the listener does. You don't get credit for sentences that existed in your head. Most couples didn't fail at effort — they failed at format: care sent in the wrong love language, information sent in a way they could not hear. Chapter 2 rebuilds it from the listener's side.",
   ],
   [
     "This sounds like tricks. NLP mind games.",
-    "These are the same mechanics used in parenting, management, and sales. The difference between a trick and a tool is the direction of aim — are you building a better pair or manufacturing control? The book bans the dirty uses by name: staged crises, compliments as smoke bombs, disappearing to manufacture hunger, makeup without repair.",
+    "These are the same mechanics used in parenting, management, and sales. The difference between a trick and a tool is the direction of aim — are you building a better relationship or manufacturing control? The book bans the dirty uses by name: staged crises, compliments as smoke bombs, disappearing to manufacture hunger, makeup without repair.",
+  ],
+  [
+    "This is just operant conditioning repackaged.",
+    "The book uses a century of behavioral science plus Helen Fisher's fMRI work on love and heartbreak — aimed at a relationship, not a lab. The mechanics are old. Pointing them at a better relationship, on purpose, is the part most people never do.",
+  ],
+  [
+    "Why the dog-training title?",
+    "The title is deliberate provocation. The method inside is deliberate care.",
   ],
   [
     "Is it too late for us? The past is poisoned.",
-    "Memory is rebuilt, not replayed — that's not a metaphor, it's the neuroscience (Chapter 8). Old nights can be recoded in a positive state with a better narrative. And arguing about the past writes you as a worse partner in it. There's a sequence for this.",
+    "No. The facts and the lessons stay. What changes is the emotion attached to remembering the event. Memory is rebuilt, not replayed — that's the neuroscience (Chapter 8), and there's a sequence for it. Arguing about the past writes you as a worse partner in it.",
   ],
   [
     "I don't want a system. I want love.",
@@ -52,7 +60,7 @@ const FAQS: Array<[string, string]> = [
   ],
   [
     "Does it work if only I read it?",
-    "That's the design. The entire sequence starts with your behavior, your communication, your incentives. You don't need their buy-in to become the bell.",
+    "That's the design. The entire sequence starts with your behavior, your communication, your incentives. You don't need their buy-in to change the mode of the house.",
   ],
   [
     "We're already in counseling. Is this a replacement?",
@@ -104,38 +112,70 @@ export function H2TYPPage() {
           A guide to better relationships.
         </p>
 
-        <h1>Run your relationship like an operator.</h1>
+        <h1>Run your relationship like a system.</h1>
 
         <p className="lf-lead">
           Most relationship books tell you to share your feelings and hope. This one
           treats the relationship like a system you can run.
         </p>
 
+        <h2>The gate: read this before anything else</h2>
+
+        <p>This book is for adults in an intimate relationship who will change their own behavior first. Dating, living together, married, or trying to get back to any of those without lighting the house on fire. Single, on date one, or in year fifty — the sequence is the same: become a person first, then pick, then run the system.</p>
+
+        <div className="lf-warn">
+          <h2>Do NOT buy this book if:</h2>
+          <p>
+            <strong>You are being physically hurt.</strong> If your partner is hitting
+            you, this book is not the move. Get out. (US: thehotline.org · 1-800-799-7233)
+          </p>
+          <p>
+            <strong>Your plan is “make them change while I stay the same.”</strong> Anyone
+            whose plan is to stay identical while the other person becomes convenient,
+            quieter, easier to manage should close this page.
+          </p>
+          <p>
+            <strong>You are hunting a hypnosis script to own a human.</strong> Same tools
+            can be used to manipulate. If that is the plan, you are the problem this
+            book is warning the other person about.
+          </p>
+          <p>
+            <strong>You need someone else to give you a personality</strong> — or you need
+            “save me / complete me” repair first. A person who cannot be well alone will
+            use the other person as a life-support machine. That is not love. That is a
+            hostage situation with extra holidays.
+          </p>
+        </div>
+
         <p>
-          <strong>You can&apos;t change the past. But you can change the memory of
-          it — which is the same thing.</strong>{" "}
-          Memory isn&apos;t a recording; it&apos;s a rebuild. Every time your partner
-          recalls a fight, they reconstruct it, and whatever story followed the
-          event gets mixed into what they think they saw. That&apos;s the
-          misinformation effect — Elizabeth Loftus&apos;s lab work, not folk wisdom.
-          Chapter 7 is called <em>Time Travel</em>: recode the past so a new
-          reward can beat an old wound, and frontload a night that hasn&apos;t
-          happened yet so the brain gets a finished good memory and the evening
-          just has to catch up.
+          Also not for your boss, your coworker, your kid, or your vendor. Those are
+          relationships — they get a different book (<a href="https://h2lp.invocationinc.com/"><em>How to Like People</em></a>). If you
+          apply partner-training tools to an employee or a child, you are not clever.
+          You are the problem.
+        </p>
+
+        <p>
+          Nobody remembers the actual event. They remember the emotion attached to the
+          event. When you remember a fight, your body replays the feeling — the anger,
+          the fear, the shame — as if it is happening now. That feeling is the part
+          that poisons the next conversation. The facts and the lessons are not erased;
+          you keep those. The goal is to change the emotion attached to remembering the
+          event, so it stops hijacking the present. That is what Chapter 8, &quot;Changing
+          the Past,&quot; is about.
         </p>
 
         <p>
           Yes, the title is deliberate. No, it is not about controlling anyone.{" "}
-          <strong>You train the positive behavior</strong> — yours first, then the
-          pair's — with communication that actually lands, incentives aimed at a
+          <strong>You train the positive behavior</strong> — yours first, then theirs —
+          with communication that actually lands, incentives aimed at a
           better relationship instead of a better leash, and daily habits that stop
-          the slow rot.
+          you from falling out of love.
         </p>
 
         <p>
           If you will change your own behavior first, you get a working sequence:
           get-out rules, self-repair, communication that lands, questions that expose
-          deal-breakers, and daily operating habits that stop the slow rot.
+          deal-breakers, and daily habits that stop you from falling out of love.
         </p>
 
         <p>
@@ -154,85 +194,64 @@ export function H2TYPPage() {
           </p>
         </div>
 
-        <h2>The gate: read this before anything else</h2>
-
-        <p>This book is for adults in an intimate relationship who will change their own behavior first. Dating, living together, married, or trying to get back to any of those without lighting the house on fire. Single, on date one, or in year fifty — the sequence is the same: become a person first, then pick, then run the system.</p>
-
-        <div className="lf-warn">
-          <h2>Do NOT buy this book if:</h2>
-          <p>
-            <strong>You are being physically hurt.</strong> If your partner is hitting
-            you, this book is not the move. Get out. (US: thehotline.org · 1-800-799-7233)
-          </p>
-          <p>
-            <strong>Your plan is “make them change while I stay the same.”</strong> Anyone
-            whose plan is to stay identical while the other person becomes convenient
-            should close this page.
-          </p>
-          <p>
-            <strong>You are hunting a hypnosis script to own a human.</strong> Same tools
-            can be used to manipulate. If that is the plan, you are the problem this
-            book is warning the other person about.
-          </p>
-          <p>
-            <strong>You need someone else to give you a personality</strong> — or you need
-            “save me / complete me” repair first. A person who cannot be well alone will
-            use the other person as a life-support machine. That is not love. That is a
-            hostage situation with extra holidays.
-          </p>
-        </div>
+        <h2>Falling out of love: what this book fixes</h2>
 
         <p>
-          Also not for your boss, your coworker, your kid, or your vendor. Those are
-          relationships — they get a different book (<em>How to Like People</em>). If you
-          apply partner-training tools to an employee or a child, you are not clever.
-          You are the problem.
+          No part of you means the sentences you are still saying. You can tell: they
+          come out of your mouth slightly before you decide to say them, and you watch
+          yourself saying them like you are standing three feet behind yourself. Those
+          are recordings, and the people playing them recorded them decades ago. Most
+          people hear a recording and answer it as if it were said today — about today —
+          and that is how a Tuesday argument about dishes becomes a fight about everything
+          that ever happened.
         </p>
 
-        <h2>The rot: what this book fixes</h2>
-
-        <p>
-          Every relationship accumulates a file of old sentences. They come back
-          in fights, word for word: <em>“You are just like your mother.” “I should have
-          left.” “You’re lucky I stay.”</em> The words you choose plant the seed of
-          either success or failure in the mind of another — permanently.
-        </p>
-
-        <p>Most fights are just two different versions of the same story — different views, different perspectives.</p>
+        <p>Most fights are just two people who heard the same sentence in two different languages.</p>
 
         <p>
           Mismatch is most of the stupid fights in a house. <em>“You never help”</em>{" "}
           often means <em>“you never touch me.”</em> A complaint is “the dishes are still
           in the sink.” Criticism is a verdict on their character. Hints are not
           communication — they are a test the other person did not agree to take.
+          Most of those fights were never agreed to in the first place. An agreement
+          needs a destination and a clock — what, and when. If you can&apos;t tell whether
+          you landed, you didn&apos;t agree. You expected. Two pilots, one plane, no agreed
+          destination: you crash the plane.
         </p>
 
         <p>
-          The top three reasons relationships fail: <strong>#1 Communication</strong>{" "}
-          (including contempt), <strong>#2 Attention</strong> — presence, affection, sex —{" "}
-          <strong>#3 Money.</strong> And the quiet killer underneath: <em>“If you cannot
-          say the thing, you do not get to be angry they missed it.”</em>
+          The top four reasons relationships fail. 1. Mismatch. 2. The quiet killer: two
+          versions of the same event. If it was not said, it could not be understood — and
+          if the listener did not hear and understand it, it did not land. Most people are
+          still running old conversations. 3. The scared, sorry, and insecure stuff that turns
+          a Tuesday into a landmine. 4. The slow fade nobody addresses until someone is
+          already gone. An unspoken expectation is not an agreement.
         </p>
 
         <p>
-          If the relationship only works when someone is scared or sorry, it is not a
-          language problem. And people with no life cling; people with a savage inner
-          narrator date whoever confirms it. The rot starts before the first fight.
+          If you are scared, sorry, or insecure, none of this lands — and you would not
+          be the first. Codependency turns love into surveillance. A savage inner narrator
+          turns every silence into evidence. You can begin to fall out of love before the
+          first fight, and one person quietly checking out is enough to end it. That is why
+          the book starts where the relationship actually lives: with you, and the sentences
+          you are still saying that you never meant.
         </p>
 
         <h2>The mechanism: Relationship Math</h2>
 
         <p>
-          And this isn&apos;t vibes — it&apos;s hard science. Helen Fisher sticking
-          couples into fMRI scanners and dissecting the anatomy of love. Conditioning
-          mechanics. Neurochemistry you can run on purpose instead of by accident.
+          And this isn&apos;t vibes — it&apos;s hard science. Neuroscientist Helen Fisher
+          spent years putting people in love — and people heartbroken — into fMRI scanners,
+          mapping what the brain actually does during both. This book takes her findings
+          seriously. Underneath that: a Russian with dogs and a century of behavioral
+          science, and neurochemistry you can run on purpose instead of by accident.
         </p>
 
         <p>
           Here is the core mechanic, and it is not fair:{" "}
           <strong>negatives hit at −2 or more. Positives land at +1 or less.</strong>{" "}
           One contemptuous sentence erases a week of kindness. Once you know the math,
-          you stop spending your words like they are all worth the same.
+          you stop <strong>spending</strong> your words like they are all worth the same.
         </p>
 
         <p>
@@ -240,33 +259,34 @@ export function H2TYPPage() {
           positive. <strong>Run from the sabertooth, walk toward the berries.</strong>{" "}
           The brain is built to remember the saber-tooth — anger and disappointment
           stick because they read as threat. So you don&apos;t change the present with
-          fear. You train the positive behavior and reward it until it&apos;s ordinary.
+          fear. You train the positive behavior and reward it until it stops feeling like a technique and starts feeling like you.
         </p>
 
         <p>
           <strong>Communication is what the listener does.</strong> You get credit for
-          what arrived — not for the sentence that existed in your head. Send care in
-          their love language. Send information in their representational system. Be the
-          leveler. Diagnose the fight by Maslow layer: is this a blood-sugar war or a
-          respect war?
+          what arrived — not for the sentence that existed in your head. You will
+          communicate so it lands: saying it in a way the other person can actually
+          hear — plainly, at the right time, without the vinegar. You will learn to tell
+          which kind of fight you are actually in. Is this a blood-sugar war, a sleep war,
+          a fear war, or a respect war? Most fights are misdiagnosed, so the fix misses.
+          You will get the four failure modes — and the repair move for each one — and a
+          way to say the thing plainly that does not start a war.
         </p>
 
         <p>
-          And the part nobody says out loud: <strong>you are the bell</strong> — the
-          trigger that sets your partner&apos;s mood the moment the car pulls in, before
-          a word is spoken. <strong>You are the cause of way more than you know.</strong>{" "}
-          Operant conditioning means what follows a behavior teaches the future. You are
-          already training each other every day. This book makes it deliberate, and aimed
-          at the pair instead of at winning.
+          Then the house itself starts working. The tone, the rhythm, the way an evening
+          goes — all of it can be set on purpose instead of inherited from whoever had the
+          worst day. The mode of the house becomes something you choose: calm, warm, direct.
+          Aimed at the two of you, not at winning the fight.
         </p>
 
-        <p>The operator sequence, in order:</p>
+        <p>The sequence, in order:</p>
         <ol>
-          <li><strong>Fix yourself first.</strong> Minimum viable you — ten practices — before you operate on anyone else.</li>
-          <li><strong>Communicate so it lands.</strong> Their language, their system, no Four Horsemen.</li>
-          <li><strong>Expose deal-breakers early.</strong> Staged questions — then watch the week, because behavior is the spec.</li>
-          <li><strong>Run incentives on purpose.</strong> Reward the positive behavior. Redirection beats punishment. ~21 pairings installs a habit.</li>
-          <li><strong>Daily habits that stop the rot.</strong> Morning/night bookends, the Pause, the recode debrief, frontloaded good nights.</li>
+          <li><strong>Fix yourself first.</strong> The recordings, the fear, the old sentences — dealt with before you touch anything else.</li>
+          <li><strong>Communicate so it lands.</strong> Plainly, at the right time, in a way they can hear it.</li>
+          <li><strong>Expose deal-breakers early.</strong> Find out in month one what would end it in year five — gently, honestly, before anyone is trapped. If you never had an agreement, you never had an agreement.</li>
+          <li><strong>Run incentives on purpose.</strong> Reward the good deliberately, with real affection and care — redirect what is not working without punishment or coldness.</li>
+          <li><strong>Build daily habits that stop you from falling out of love.</strong> Small repetitions until the good is automatic — warm, direct, calm.</li>
         </ol>
 
         <h2>What you’ll learn: the 12 chapters</h2>
@@ -283,8 +303,8 @@ export function H2TYPPage() {
         <p>
           <strong>“Isn’t this manipulative?”</strong> It is the right question, and the
           book answers it before you can finish asking. The tools are incentive
-          mechanics every human already runs unconsciously. This book makes them
-          conscious — and then puts them on a leash:
+          mechanics every human already runs subconsciously. This book makes them
+          conscious — and then constrains them:
         </p>
 
         <ul>
@@ -297,8 +317,12 @@ export function H2TYPPage() {
 
         <p>
           The difference between a trick and a tool is the direction of aim. Aim at a
-          better pair and it is a tool. Aim at control and you are the problem this
+          better relationship and it is a tool. Aim at control and you are the <strong>problem</strong> this
           book is warning the other person about.
+        </p>
+
+        <p>
+          And a tell worth learning: “you always” and “you never” are usually pointing at a deeper, unresolved complaint — one that has been waiting a long time to be said plainly.
         </p>
 
         <h2>The author</h2>
@@ -332,7 +356,7 @@ export function H2TYPPage() {
               The book is what those jobs have in common: humans respond to incentives,
               stories, and repetition — whether you admit it or not. Years of knowledge,
               hundreds of books and published papers, years of coaching people on
-              relationships — dumbed down into methods normal people can use. No NLP. No
+              relationships — boiled down into methods regular people can actually use. No NLP. No
               regressive hypnosis. No EMDR. None of the professional and dark arts of
               psychology required.
             </p>
@@ -343,7 +367,7 @@ export function H2TYPPage() {
 
         <p>
           <strong>How to Train Your Partner</strong> — the complete book, direct from
-          the author. Years of knowledge dumbed down into methods normal people can
+          the author. Years of knowledge boiled down into methods regular people can actually
           use. It&apos;s not even a hundred pages. What&apos;s that worth? The coaching
           behind it is expensive. The manual is <s>{bookProduct.listPriceDisplay}</s>{" "}
           <strong>{bookProduct.priceDisplay}</strong>.
@@ -379,8 +403,8 @@ export function H2TYPPage() {
 
         <div className="lf-ps">
           <p>
-            P.S. — Thought. Word. Act. Habit. Character. Destiny of the pair. Every
-            relationship you have ever watched rot did it one unexamined day at a time.
+            P.S. — Thought. Word. Act. Habit. Character. Destiny of the relationship. Every
+            relationship you have ever watched fall out of love did it one unexamined day at a time.
             This book is the other direction, on purpose.
           </p>
         </div>
