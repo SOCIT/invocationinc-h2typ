@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   getSiteUrl,
   getStripe,
-  resolveCheckoutPriceId,
+  getStripePriceId,
 } from "@/lib/stripe";
 import { isValidProductId } from "@/lib/products";
 
@@ -21,9 +21,7 @@ export async function POST(request: NextRequest) {
     }
 
     const stripe = getStripe();
-    const priceId = stripe
-      ? await resolveCheckoutPriceId(stripe, productId)
-      : null;
+    const priceId = getStripePriceId(productId);
 
     if (!stripe || !priceId) {
       return NextResponse.json(
