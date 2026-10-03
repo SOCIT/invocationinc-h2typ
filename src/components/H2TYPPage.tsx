@@ -95,7 +95,6 @@ export function H2TYPPage() {
             className="lf-imprint-logo"
           />
         </a>
-        <Link href="#offer">Get the Ebook — {bookProduct.priceDisplay}</Link>
       </header>
 
       <main id="main" className="lf-wrap">
@@ -180,14 +179,6 @@ export function H2TYPPage() {
           If you want a script to control someone who does not want you, this is the
           wrong book.
         </p>
-
-        <div className="lf-cta" id="buy-hero">
-          <BuyButton
-            productId="book"
-            label={<>Get the Ebook — {bookProduct.priceDisplay}</>}
-          />
-          <p className="lf-tiny">PDF + EPUB instant download.</p>
-        </div>
 
         <h2>Falling out of love: what this book fixes</h2>
 
@@ -371,10 +362,6 @@ export function H2TYPPage() {
           <div className="lf-format">
             <p className="lf-format-label">Read</p>
             <p>The ebook. PDF + EPUB. {bookProduct.priceDisplay}.</p>
-            <BuyButton
-              productId="book"
-              label={<>Get the Ebook — {bookProduct.priceDisplay}</>}
-            />
           </div>
           <div className="lf-format">
             <p className="lf-format-label">Listen</p>

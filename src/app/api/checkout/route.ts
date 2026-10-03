@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   getSiteUrl,
   getStripe,
-  getStripePriceId,
+  resolveCheckoutPriceId,
 } from "@/lib/stripe";
 import { isValidProductId } from "@/lib/products";
 
@@ -21,7 +21,9 @@ export async function POST(request: NextRequest) {
     }
 
     const stripe = getStripe();
-    const priceId = getStripePriceId(productId);
+    const priceId = stripe
+      ? await resolveCheckoutPriceId(stripe, productId)
+      : null;
 
     if (!stripe || !priceId) {
       return NextResponse.json(
@@ -43,7 +45,7 @@ export async function POST(request: NextRequest) {
       cancel_url: `${siteUrl}/cancel`,
       metadata: { productId },
       billing_address_collection: "auto",
-      allow_promotion_codes: true,
+      allow_promotion_codes: false,
     });
 
     if (!session.url) {
