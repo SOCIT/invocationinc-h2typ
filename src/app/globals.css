@@ -63,11 +63,6 @@ body {
   z-index: 50;
 }
 
-.lf-bar time,
-.lf-bar .lf-timer {
-  color: #ffe08a;
-}
-
 .lf-site-header {
   display: flex;
   justify-content: space-between;
@@ -418,31 +413,29 @@ body {
   text-transform: uppercase;
 }
 
-.lf-timer-hero {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 34px;
-  font-weight: 900;
-  margin: 6px 0 12px;
+.lf-formats {
+  margin: 8px 0 0;
 }
 
-.lf-timer-story {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  margin: 0 0 12px;
+.lf-format {
+  border-left: 5px solid var(--red);
+  padding: 4px 0 4px 16px;
+  margin: 20px 0;
 }
 
-.lf-timer-offer {
+.lf-format-label {
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  font-weight: 900;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 6px;
 }
 
-.lf-timer-final {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  font-size: 28px;
-  margin: 0 0 8px;
+.lf-formats .lf-tiny {
+  color: var(--soft);
 }
 
 .lf-buy {

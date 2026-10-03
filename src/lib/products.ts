@@ -10,12 +10,9 @@ export interface Product {
   name: string;
   shortName: string;
   description: string;
-  /** Charge price shown on buttons. */
+  /** Charge price shown on buttons. One price. No strike. */
   priceDisplay: string;
   priceCents: number;
-  /** List / strike price when different from charge price. */
-  listPriceDisplay?: string;
-  listPriceCents?: number;
   /** Env var name holding the Stripe Price ID for this offer. */
   stripePriceEnvKey: "STRIPE_PRICE_BOOK";
   /**
@@ -42,19 +39,14 @@ export const brand = {
   red: "#d10f28",
 } as const;
 
-/** First-100 launch code: $9.97 -> $4.97 at checkout (enter at payment step). */
-export const LAUNCH_CODE = "H2TYP100";
-
 export const products: Product[] = [
   {
     id: "book",
     name: "How to Train Your Partner — Ebook",
     shortName: "The Ebook",
     description: "The complete book. PDF + EPUB, available instantly.",
-    priceDisplay: "$9.97",
-    priceCents: 997,
-    listPriceDisplay: "$19.97",
-    listPriceCents: 1997,
+    priceDisplay: "$9.99",
+    priceCents: 999,
     stripePriceEnvKey: "STRIPE_PRICE_BOOK",
     paymentLinkUrl: "",
     highlighted: true,
