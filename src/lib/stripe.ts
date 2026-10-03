@@ -19,6 +19,7 @@ export function isCheckoutConfigured(productId?: ProductId): boolean {
   return Boolean(getStripePriceId(productId));
 }
 
+/** Live H2TYP ebook Price is $9.99: price_1UMYUhPj4KYXkIe0wIBODvIa. Set STRIPE_PRICE_BOOK to that ID. */
 export function getStripePriceId(productId: ProductId): string | null {
   const product = getProduct(productId);
   if (!product) return null;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BuyButton } from "./BuyButton";
-import { bookProduct, LAUNCH_CODE } from "@/lib/products";
+import { bookProduct } from "@/lib/products";
 
 const CHAPTERS: Array<[string, string]> = [
   ["Chapter 0 — Brief", "The contract. Fix yourself first, communicate so it lands, use incentives without becoming a manipulator. Includes the violence and codependence gates — read these before anything else."],
@@ -72,16 +72,14 @@ const FAQS: Array<[string, string]> = [
   ],
   [
     "Will this be on Amazon?",
-    "Kindle and paperback editions are coming to Amazon at their own prices. Buying here direct gets you the launch price — and the first 100 readers pay $4.97 with the code at the top of this page.",
+    "Kindle and paperback editions are coming to Amazon at their own prices.",
   ],
 ];
 
 export function H2TYPPage() {
   return (
     <>
-      <div className="lf-bar">
-        HOW TO TRAIN YOUR PARTNER — <span className="lf-now">$9.97 · FIRST 100 READERS PAY $4.97</span>
-      </div>
+      <div className="lf-bar">HOW TO TRAIN YOUR PARTNER</div>
 
       <header className="lf-site-header">
         <a
@@ -97,7 +95,6 @@ export function H2TYPPage() {
             className="lf-imprint-logo"
           />
         </a>
-        <Link href="#offer">Get the Ebook — {bookProduct.priceDisplay}</Link>
       </header>
 
       <main id="main" className="lf-wrap">
@@ -182,17 +179,6 @@ export function H2TYPPage() {
           If you want a script to control someone who does not want you, this is the
           wrong book.
         </p>
-
-        <div className="lf-cta" id="buy-hero">
-          <BuyButton
-            productId="book"
-            label={<>Get the Ebook — {bookProduct.priceDisplay}</>}
-          />
-          <p className="lf-tiny">
-            First 100 readers: enter code <strong>{LAUNCH_CODE}</strong> at checkout
-            and pay $4.97. PDF + EPUB instant download.
-          </p>
-        </div>
 
         <h2>Falling out of love: what this book fixes</h2>
 
@@ -369,14 +355,26 @@ export function H2TYPPage() {
           <strong>How to Train Your Partner</strong> — the complete book, direct from
           the author. Years of knowledge boiled down into methods regular people can actually
           use. It&apos;s not even a hundred pages. What&apos;s that worth? The coaching
-          behind it is expensive. The manual is <s>{bookProduct.listPriceDisplay}</s>{" "}
-          <strong>{bookProduct.priceDisplay}</strong>.
+          behind it is expensive. The manual is {bookProduct.priceDisplay}.
         </p>
 
+        <section className="lf-formats" aria-label="Formats">
+          <div className="lf-format">
+            <p className="lf-format-label">Read</p>
+            <p>The ebook. PDF + EPUB. {bookProduct.priceDisplay}.</p>
+          </div>
+          <div className="lf-format">
+            <p className="lf-format-label">Listen</p>
+            <p>In production.</p>
+          </div>
+          {/* DO omitted: no workbook product in the repo. */}
+          <div className="lf-format">
+            <p className="lf-format-label">Watch</p>
+            <p>In production.</p>
+          </div>
+        </section>
+
         <div className="lf-cta">
-          <p className="lf-cta-kicker">
-            First 100 readers pay $4.97 — enter code <strong>{LAUNCH_CODE}</strong> at checkout
-          </p>
           <BuyButton
             productId="book"
             label={<>Get the Ebook — {bookProduct.priceDisplay}</>}
@@ -386,8 +384,14 @@ export function H2TYPPage() {
           </p>
           <p className="lf-tiny">
             Sold here direct from the author. Kindle and paperback editions are coming
-            to Amazon at their own prices — buying here gets you the launch price.
+            to Amazon at their own prices.
           </p>
+          {/*
+            Retailer buttons not rendered. No listing URLs in the repo or site config.
+            Also on Amazon — MISSING URL
+            Also on Kobo — MISSING URL
+            Also on Apple Books — MISSING URL
+          */}
         </div>
 
         <h2>Questions</h2>
