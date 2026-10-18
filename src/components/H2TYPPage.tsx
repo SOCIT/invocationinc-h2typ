@@ -105,9 +105,6 @@ export function H2TYPPage() {
         <p className="lf-tiny" style={{ textAlign: "center", marginBottom: 4 }}>
           HOW TO TRAIN YOUR PARTNER
         </p>
-        <p className="lf-tiny" style={{ textAlign: "center", marginTop: 0 }}>
-          A guide to better relationships.
-        </p>
 
         <h1>Run your relationship like a system.</h1>
 
@@ -206,12 +203,16 @@ export function H2TYPPage() {
         </p>
 
         <p>
-          The top four reasons relationships fail. 1. Mismatch. 2. The quiet killer: two
-          versions of the same event. If it was not said, it could not be understood — and
-          if the listener did not hear and understand it, it did not land. Most people are
-          still running old conversations. 3. The scared, sorry, and insecure stuff that turns
-          a Tuesday into a landmine. 4. The slow fade nobody addresses until someone is
-          already gone. An unspoken expectation is not an agreement.
+          The top four reasons relationships fail:</p>
+        <p>1. Mismatch.</p>
+        <p>
+          2. The quiet killer: two versions of the same event. If it was not said, it
+          could not be understood — and if the listener did not hear and understand it,
+          it did not land. Most people are still running old conversations.</p>
+        <p>3. The scared, sorry, and insecure stuff that turns a Tuesday into a landmine.</p>
+        <p>
+          4. The slow fade nobody addresses until someone is already gone. An
+          unspoken expectation is not an agreement.
         </p>
 
         <p>
@@ -339,10 +340,7 @@ export function H2TYPPage() {
             </p>
 
             <p>
-              The book is what those jobs have in common: humans respond to incentives,
-              stories, and repetition — whether you admit it or not. Years of knowledge,
-              hundreds of books and published papers, years of coaching people on
-              relationships — boiled down into methods regular people can actually use. No NLP. No
+              The book is what those jobs have in common. Years of knowledge, hundreds of books and published papers, years of coaching people on relationships — written down as methods regular people can actually use. No NLP. No
               regressive hypnosis. No EMDR. None of the professional and dark arts of
               psychology required.
             </p>
