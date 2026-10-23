@@ -64,7 +64,7 @@ const FAQS: Array<[string, string]> = [
   ],
   [
     "We're already in counseling. Is this a replacement?",
-    "No. This isn't therapy — it's a daily operating system for the hours between sessions. If you need therapy, get therapy. This book assumes you're safe enough to stay and whole enough to change yourself first.",
+    "It's a daily operating system for the hours between sessions.",
   ],
   [
     "What exactly do I get?",
@@ -143,9 +143,7 @@ export function H2TYPPage() {
 
         <p>
           Also not for your boss, your coworker, your kid, or your vendor. Those are
-          relationships — they get a different book (<a href="https://h2lp.invocationinc.com/"><em>How to Like People</em></a>). If you
-          apply partner-training tools to an employee or a child, you are not clever.
-          You are the problem.
+          relationships — they get a different book (<a href="https://h2lp.invocationinc.com/"><em>How to Like People</em></a>).
         </p>
 
         <p>
@@ -413,7 +411,7 @@ export function H2TYPPage() {
       </main>
 
       <footer className="lf-footer">
-        <p>© {new Date().getFullYear()} Invocation Inc. Not therapy. Not medical advice.</p>
+        <p>© {new Date().getFullYear()} Invocation Inc.</p>
         <p className="lf-imprint-line">
           <img
             src="/img/invocation-logo.png"
