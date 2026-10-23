@@ -6,7 +6,7 @@ The public landing is a port of the approved Chat longform v2. **Do not invent o
 
 `docs/APPROVED-LONGFORM-V2.html`
 
-Method tokens: SmileBell™ / CalmBell™, Mood Log 6×/day, present-tense Change Statements, DoTo. Not therapy.
+Method tokens: SmileBell™ / CalmBell™, Mood Log 6×/day, present-tense Change Statements, DoTo.
 
 ## Offers
 
