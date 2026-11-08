@@ -15,28 +15,36 @@ export async function POST(request: NextRequest) {
     }
 
     const email = emailRaw.toLowerCase();
-    const sourceRaw = typeof body?.source === "string" ? body.source.trim() : "";
-    const source = /^[a-z0-9-]{1,40}$/.test(sourceRaw) ? sourceRaw : "ew2h-sales";
-    console.log(`[newsletter] subscribe: ${email}`);
+    const apiKey = process.env.RESEND_API_KEY;
+    const audienceId = process.env.RESEND_AUDIENCE_ID;
 
-    const webhook = process.env.NEWSLETTER_WEBHOOK_URL;
-    if (webhook) {
-      try {
-        const res = await fetch(webhook, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            email,
-            source,
-            ts: new Date().toISOString(),
-          }),
-        });
-        if (!res.ok) {
-          console.error(`[newsletter] webhook failed: ${res.status}`);
-        }
-      } catch (err) {
-        console.error("[newsletter] webhook error:", err);
+    if (!apiKey || !audienceId) {
+      console.error("[newsletter] Resend is not configured.");
+      return NextResponse.json(
+        { error: "Unable to subscribe. Try again." },
+        { status: 503 }
+      );
+    }
+
+    const res = await fetch(
+      `https://api.resend.com/audiences/${audienceId}/contacts`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, unsubscribed: false }),
       }
+    );
+
+    // A repeat signup is already on the list, not an error for the reader.
+    if (!res.ok && res.status !== 409) {
+      console.error(`[newsletter] Resend subscribe failed: ${res.status}`);
+      return NextResponse.json(
+        { error: "Unable to subscribe. Try again." },
+        { status: 502 }
+      );
     }
 
     return NextResponse.json({

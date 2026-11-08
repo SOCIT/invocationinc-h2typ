@@ -26,8 +26,8 @@ export default function PrivacyPage() {
         <p>
           Payment card data is handled by Stripe; we do not store full card
           numbers on our servers. We do not sell your personal information.
-          Newsletter signups may be forwarded to a configured webhook
-          (`NEWSLETTER_WEBHOOK_URL`) when set.
+          Newsletter signups are stored as contacts in our Resend mailing
+          list.
         </p>
         <p>
           For privacy requests or questions, contact {brand.legalName} using the
